@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="breadcrumb-area">
+  <div class="container">
+      <div class="breadcrumb-content">
+          <ul>
+              <li><a href="{% url 'beranda' %}">Beranda</a></li>
+              <li class="active">Inspirasi</li>
+          </ul>
+      </div>
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col-md-8">
+    {% for inspirasi in inspirasi_list %}
+      <div class="card border-dark mb-3 ml-3" style="max-width: 50rem;">
+        <h5 class="card-title ml-3">{{ inspirasi.name }}</h5>
+        <a href="{% url 'deskripsi_inspirasi' inspirasi_id=inspirasi.id %}">
+          <img class="mr-4 ml-3 mt-2" src="{{ inspirasi.image.url }}" alt="{{ inspirasi.name }}" height="350" width="750">
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="col-md-4 mt-5">
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Sweet Point</div>
+      <div class="card-body">
+        <h5 class="card-title">-Catherine Pulsifer</h5>
+        <p class="card-text">"Rumah adalah tempat di mana kita harus merasa aman dan nyaman." </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

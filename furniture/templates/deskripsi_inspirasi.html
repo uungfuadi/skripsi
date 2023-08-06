@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="breadcrumb-area">
+  <div class="container">
+      <div class="breadcrumb-content">
+          <ul>
+              <li><a href="{% url 'beranda' %}">Beranda</a></li>
+              <li class="active">Inspirasi</li>
+              <li class="active">{{ inspirasi.name }}</li>
+          </ul>
+      </div>
+  </div>
+</div>
+<br/>
+
+<br>
+<div class="media">
+  <a href="{{ inspirasi.image.url }}" target="_blank">
+    <img class="mr-3 ml-3 mr-3" src="{{ inspirasi.image.url }}" alt="{{ inspirasi.name }}" height="500" width="500">
+    <div class="media-body">
+      <h5 class="mt-0">{{ inspirasi.name }}</h5>
+      <p>{{ inspirasi.description }}</p>
+        <a href="{{ inspirasi.link }}">Link</a>
+    </div>
+</div>
+
+{% endblock content %}

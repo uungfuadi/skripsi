@@ -1,0 +1,38 @@
+ {% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+ <div class="breadcrumb-area">
+                <div class="container">
+                    <div class="breadcrumb-content">
+                        <ul>
+                            <li><a href="{% url 'beranda' %}">Beranda</a></li>
+                            <li class="active">Profil</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br/>
+<div class="container">
+  <div class="row">
+    <div class="col-md-20 offset-md-0">
+      <div class="media">
+        <a href="{% static '/images/logo.png' %}" target="_blank">
+        <img class="align-self-center mr-3" src="{% static 'assets/images/logo.png' %}" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+          <h5 class="mt-0">UD. TRIJUITA FURNITURE</h5>
+          <p>Usaha furniture yang telah berdiri sejak tahun 1998 yang berlokasi di daerah kecamatan Kendit kabupaten Situbondo.</p>
+          <p>Usaha yang didirikan dengan visi memberikan solusi bagi masyarakat untuk memperoleh produk kebutuhan rumah yang berkualitas dengan beragam pilihan. Mulai dari dapur, ruang tamu hingga kamar tidur dan kamar mandi, temukan inspirasi tidak terbatas untuk setiap ruangan yang kamu dambakan.</p>
+          <h5 class="mt-0">INFORMATIONS</h5>
+          <p>Apabila anda memiliki pertanyaan dan panjelasan mengenai produk, silahkan menghubungi dan kami akan siap untuk membantu anda.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
